@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Arena</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>RPS Battle Arena</h1>
+            <p>Beat the CPU and build your ultimate win streak!</p>
+        </header>
+
+        <!-- Stats Scoreboard Grid -->
+        <div class="scoreboard-card">
+            <div class="stat-item">
+                <span class="stat-label">YOU</span>
+                <span class="stat-value" id="user-score">0</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-label">CPU</span>
+                <span class="stat-value" id="comp-score">0</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-label">STREAK</span>
+                <span class="stat-value highlight" id="win-streak">0</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-label">WIN RATE</span>
+                <span class="stat-value" id="win-rate">0%</span>
+            </div>
+        </div>
+
+        <!-- Central Battle Arena (Populated during battles) -->
+        <div class="battle-arena" id="battle-arena">
+            <div class="fighter player-fighter">
+                <p class="fighter-label">YOU</p>
+                <div class="fighter-card" id="player-card">
+                    <img id="player-card-img" src="./images/rock.png" alt="Rock">
+                </div>
+            </div>
+            <div class="vs-badge">VS</div>
+            <div class="fighter comp-fighter">
+                <p class="fighter-label">CPU</p>
+                <div class="fighter-card" id="comp-card">
+                    <img id="comp-card-img" src="./images/rock.png" alt="Rock">
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Outcome Banner -->
+        <div class="msg-container">
+            <p id="msg">Select your weapon below to enter the battle</p>
+        </div>
+
+        <!-- Weapon Choice Controls -->
+        <div class="choices-container">
+            <div class="choices">
+                <div class="choice" id="rock" title="Select Rock">
+                    <div class="choice-glow"></div>
+                    <img src="./images/rock.png" alt="Rock">
+                    <span class="choice-label">ROCK</span>
+                </div>
+                <div class="choice" id="paper" title="Select Paper">
+                    <div class="choice-glow"></div>
+                    <img src="./images/paper.png" alt="Paper">
+                    <span class="choice-label">PAPER</span>
+                </div>
+                <div class="choice" id="scissors" title="Select Scissors">
+                    <div class="choice-glow"></div>
+                    <img src="./images/scissors.png" alt="Scissors">
+                    <span class="choice-label">SCISSORS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reset Button Controller -->
+        <div class="reset-container">
+            <button id="reset-btn" class="reset-btn">Reset Scoreboard</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
